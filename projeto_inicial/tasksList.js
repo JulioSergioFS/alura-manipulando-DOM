@@ -1,6 +1,8 @@
 const button = document.querySelector("[data-form-button]");
+const task = document.querySelector(".content");
 
 button.addEventListener('click', (event) => {
-    event.preventDefault()
-    console.log('I got clicked!')
+    event.preventDefault();
+    const input = document.querySelector("[data-form-input]").value;
+    task.textContent = input;
 });
