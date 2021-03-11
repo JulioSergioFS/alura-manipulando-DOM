@@ -1,4 +1,5 @@
-const createTask = (event) => {
+( () => {
+    const createTask = (event) => {
     const input = document.querySelector("[data-form-input]");
     const inputValue = input.value;
     const listOfTasks = document.querySelector("[data-list]");
@@ -38,3 +39,4 @@ const finishTask = (event) => {
 
     finishedTask.classList.toggle('done');
 };
+})()
