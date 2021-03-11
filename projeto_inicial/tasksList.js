@@ -1,9 +1,18 @@
-function createTask(event) {
-    const task = document.querySelector(".content");
+const createTask = (event) => {
+    const input = document.querySelector("[data-form-input]");
+    const inputValue = input.value;
+    const listOfTasks = document.querySelector("[data-list]");
 
     event.preventDefault();
-    const input = document.querySelector("[data-form-input]").value;
-    task.textContent = input;
+
+    const task = document.createElement("li");
+    task.classList.add('task');
+
+    const taskContent = `<p class="content">${inputValue}</p>`;
+    task.innerHTML = taskContent;
+    listOfTasks.appendChild(task);
+
+    input.value = " ";
 }
 
 const button = document.querySelector("[data-form-button]");
