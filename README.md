@@ -1,4 +1,4 @@
-### Portguese
+### Portuguese
 
 Esse projeto foi criado no curso da Alura "JS na Web: Manipule o DOM com JavaScript", e grande parte do código foi proporcionado por eles.
 O proposito desse curso e desse projeto, como diz no [site deles](https://www.alura.com.br/) (no dia que isso foi escrito, 12 de março de 2021) , é:
