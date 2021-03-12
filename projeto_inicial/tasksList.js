@@ -12,6 +12,7 @@
     const taskContent = `<p class="content">${inputValue}</p>`;
     task.innerHTML = taskContent;
     task.appendChild(FinishedButton());
+    task.appendChild(DeleteButton());
     listOfTasks.appendChild(task);
 
     input.value = " ";
@@ -20,6 +21,7 @@
 const button = document.querySelector("[data-form-button]");
 
 button.addEventListener('click', createTask);
+
 
 const FinishedButton = () => {
     const finishedButton = document.createElement("button");
@@ -33,10 +35,28 @@ const FinishedButton = () => {
 };
 
 const finishTask = (event) => {
-    const finishButton = event.target;
+    const finishedButton = event.target;
 
-    const finishedTask = finishButton.parentElement;
+    const finishedTask = finishedButton.parentElement;
 
     finishedTask.classList.toggle('done');
 };
+
+
+const DeleteButton = (event) => {
+    const deleteButton = document.createElement("button");
+
+    deleteButton.innerText = 'Delete';
+    deleteButton.addEventListener('click', deleteTask);
+
+    return deleteButton;
+}
+
+const deleteTask = (event) => {
+    const deleteButton = event.target;
+
+    const toDeleteTask = deleteButton.parentElement;
+
+    toDeleteTask.remove();
+}
 })()
